@@ -85,7 +85,6 @@
     'Cost/NBR','Cost/NBR+AOP','AV','Yst Cost','Yst Leads','Deficit',
     'Focus Project', 'AOP Project', 'YTD Spend', 'YTD Revenue', 'YTD ROI', 'Expected YTD Revenue'
   ];
-
   /* Project \u2192 SM lookup, built from the arithmetic-verified Bangalore portfolio
      (planned + unplanned + builtup). Campaign register project names carry extra
      words/typos ("L and T..." vs "L&T...", trailing dates, "Road"/"Hebbal" etc.), so
