@@ -234,8 +234,7 @@
     document.getElementById('menuBtn').onclick = () =>
       document.getElementById('sidebar').classList.toggle('open');
     document.getElementById('btnPDF').onclick = () => window.print();
-    document.getElementById('btnXLS').onclick = () =>
-      exportVisibleTable(('pp_roi_' + (S.city || 'all') + '_' + page + '.csv').replace(/\s+/g, '_').toLowerCase());
+    exportVisibleTable(('pp_roi_' + (S.city || 'all') + '_' + page + '.csv').replace(/\s+/g, '_').toLowerCase());
     updateHeadings(page, title);
   }
 
