@@ -52,7 +52,7 @@
   /* ---------------- ROI Summary table ---------------- */
   const REG_COLS = ['Region','Gross Unit','Total Gross Sales','Net Unit','Total Net Sales','Total Sales+AOP',
     'Projected Cost','Total Cost','MTD Leads','Total Leads','MTD CPL','Total QL','CPQL','SV Done',
-    'Cost/NBR','Cost/NBR+AOP','AV','Yst Cost','Leads','Deficit',
+    'Cost/NBR','Cost/NBR+AOP','AV','Cost','Leads','Deficit',
     'Focus Project', 'AOP Project', 'YTD Spend', 'YTD Revenue', 'YTD ROI', 'Expected YTD Revenue'];
 
   function regionCells(r) {
@@ -161,7 +161,8 @@
       return `<tr>
         <td>${m.manager}</td>
         <td>${fmtR(m.budget)}</td>
-            <td>${fmtR(m.targetRev)}</td>
+       <-- <td><span class="prog"><i style="width:${pct}%" class="${m.spent > m.budget ? 'over' : ''}"></i></span>${fmtR(m.spent)}</td>-->
+        <td>${fmtR(m.targetRev)}</td>
         <td>${m.mtdQL == null ? '\u2014' : fmtN(m.mtdQL)}</td>
         <td>${m.totMtdQL == null ? '\u2014' : fmtN(m.totMtdQL)}</td>
         <td>${m.targetCPQL ? fmtR(m.targetCPQL) : '\u2014'}</td>
