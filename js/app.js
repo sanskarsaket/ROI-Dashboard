@@ -228,8 +228,7 @@
         <div class="page-title" id="pageTitle"></div>
       </div>
       <div class="top-actions">
-        <button class="btn" id="btnPDF">Export PDF</button>
-        <button class="btn accent" id="btnXLS">Export Excel</button>
+               <button class="btn accent" id="btnXLS">Export Excel</button>
       </div>`;
         exportVisibleTable(('pp_roi_' + (S.city || 'all') + '_' + page + '.csv').replace(/\s+/g, '_').toLowerCase());
     updateHeadings(page, title);
