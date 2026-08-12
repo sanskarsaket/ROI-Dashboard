@@ -52,8 +52,7 @@
   /* ---------------- ROI Summary table ---------------- */
   const REG_COLS = ['Region','Gross Unit','Total Gross Sales','Net Unit','Total Net Sales','Total Sales+AOP',
     'Projected Cost','Total Cost','MTD Leads','Total Leads','MTD CPL','Total QL','CPQL','SV Done',
-    'Cost/NBR','Cost/NBR+AOP','AV','Cost','Leads','Deficit',
-    'Focus Project', 'AOP Project', 'YTD Spend', 'YTD Revenue', 'YTD ROI', 'Expected YTD Revenue'];
+    'Cost/NBR','Cost/NBR+AOP','AV','Cost','Leads','Deficit'];
 
   function regionCells(r) {
     return [
@@ -79,10 +78,7 @@
   }
 
   /* ---------------- SM / Manager View ---------------- */
-  const MGR_COLS = ['Manager','Gross Unit','Total Gross Sales','Net Unit','Total Net Sales','Total Sales+AOP',
-    'Projected Cost','Total Cost','MTD Leads','Total Leads','MTD CPL','Total QL','CPQL','SV Done',
-    'Cost/NBR','Cost/NBR+AOP','AV','Cost','Leads','Deficit',
-    'Focus Project', 'AOP Project', 'YTD Spend', 'YTD Revenue', 'YTD ROI', 'Expected YTD Revenue'];
+  const MGR_COLS = ['Manager','Total Budget','Budget Spent','Target Revenue','MTD QL','Total MTD QL','Target CPQL','MTD CPQL'];
   const SRC_COLS = ['Source Cost','Source Leads','Source CPL'];
 
   /* Project \u2192 SM lookup, built from the arithmetic-verified Bangalore portfolio
