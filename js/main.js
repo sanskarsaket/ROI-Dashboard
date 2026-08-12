@@ -176,7 +176,6 @@
     document.getElementById('smvTitle').textContent = (S.city === 'All Regions' ? 'All Regions' : S.city) + ' \u2013 SM / Manager Summary' + (srcActive ? ' \u00b7 ' + S.source : '');
     document.getElementById('smvNote').innerHTML = note;
   }
-
   /* ---------------- Project Performance ---------------- */
   const SM_COLS = ['Project Name','SM','Campaign Status','Budget Assigned','Total Budget','Budget Spent','Target Revenue',
     'QL Aligned','MTD QL','MTD DQL','Total MTD QL','Target CPQL','MTD CPQL'];
