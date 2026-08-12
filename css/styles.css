@@ -1018,3 +1018,80 @@ table.tbl{
     box-shadow:none;
   }
 }
+/* ================================
+   Project Summary / Focus / AOP Tables
+   ================================ */
+
+#panel-project_summary .tableWrap,
+#panel-focus_project .tableWrap,
+#panel-aop_project .tableWrap {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+#panel-project_summary table,
+#panel-focus_project table,
+#panel-aop_project table {
+  width: max-content;
+  min-width: 1800px;
+  table-layout: auto;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+#panel-project_summary th,
+#panel-focus_project th,
+#panel-aop_project th {
+  white-space: nowrap;
+  word-break: normal;
+  overflow-wrap: normal;
+  min-width: 90px;
+}
+
+#panel-project_summary td,
+#panel-focus_project td,
+#panel-aop_project td {
+  white-space: nowrap;
+  word-break: normal;
+  overflow-wrap: normal;
+}
+
+/* Project name gets enough space */
+#panel-project_summary th:nth-child(3),
+#panel-focus_project th:nth-child(3),
+#panel-aop_project th:nth-child(3),
+#panel-project_summary td:nth-child(3),
+#panel-focus_project td:nth-child(3),
+#panel-aop_project td:nth-child(3) {
+  min-width: 180px;
+  white-space: normal;
+}
+
+/* Checkbox columns */
+#panel-project_summary th:nth-child(1),
+#panel-project_summary th:nth-child(2),
+#panel-focus_project th:nth-child(1),
+#panel-focus_project th:nth-child(2),
+#panel-aop_project th:nth-child(1),
+#panel-aop_project th:nth-child(2) {
+  min-width: 110px;
+  text-align: center;
+}
+
+#panel-project_summary td:nth-child(1),
+#panel-project_summary td:nth-child(2) {
+  min-width: 110px;
+  text-align: center;
+}
+
+/* Checkbox sizing */
+.project-focus-checkbox,
+.project-aop-checkbox {
+  width: 17px;
+  height: 17px;
+  cursor: pointer;
+  accent-color: #fb6a02;
+}
