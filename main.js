@@ -161,7 +161,7 @@
       return `<tr>
         <td>${m.manager}</td>
         <td>${fmtR(m.budget)}</td>
-        <td><span class="prog"><i style="width:${pct}%" class="${m.spent > m.budget ? 'over' : ''}"></i></span>${fmtR(m.spent)}</td>
+       <-- <td><span class="prog"><i style="width:${pct}%" class="${m.spent > m.budget ? 'over' : ''}"></i></span>${fmtR(m.spent)}</td>-->
         <td>${fmtR(m.targetRev)}</td>
         <td>${m.mtdQL == null ? '\u2014' : fmtN(m.mtdQL)}</td>
         <td>${m.totMtdQL == null ? '\u2014' : fmtN(m.totMtdQL)}</td>
