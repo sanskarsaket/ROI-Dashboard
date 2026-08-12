@@ -15,7 +15,8 @@
   document.querySelectorAll('.tab').forEach(b => b.onclick = () => PPsetTab(b.dataset.tab));
 
   /* ---------------- helpers ---------------- */
-  const regionRow = name => D.regionSummary.find(r => r.region === name);
+  const regionRow = name => D.regionSummary.find(r => r.region ==
+    = name);
   const activeRegion = () => {
     if (!S.city || S.city.length === 0) return regionRow('Total');
     if (S.city.length === 1) return regionRow(S.city[0]) || regionRow('Total');
@@ -52,7 +53,7 @@
   /* ---------------- ROI Summary table ---------------- */
   const REG_COLS = ['Region','Gross Unit','Total Gross Sales','Net Unit','Total Net Sales','Total Sales+AOP',
     'Projected Cost','Total Cost','MTD Leads','Total Leads','MTD CPL','Total QL','CPQL','SV Done',
-    'Cost/NBR','Cost/NBR+AOP','AV','Cost','Leads','Deficit',
+    'Cost/NBR','Cost/NBR+AOP','AV','Yst.Cost','Yst.Leads','Deficit',
     'Focus Project','AOP Project','YTD Spend','YTD Revenue','YTD ROI','Expected YTD Revenue'];
 
   function regionCells(r) {
