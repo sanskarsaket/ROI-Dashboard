@@ -15,8 +15,7 @@
   document.querySelectorAll('.tab').forEach(b => b.onclick = () => PPsetTab(b.dataset.tab));
 
   /* ---------------- helpers ---------------- */
-  const regionRow = name => D.regionSummary.find(r => r.region ==
-    = name);
+  const regionRow = name => D.regionSummary.find(r => r.region === name);
   const activeRegion = () => {
     if (!S.city || S.city.length === 0) return regionRow('Total');
     if (S.city.length === 1) return regionRow(S.city[0]) || regionRow('Total');
@@ -54,7 +53,7 @@
   const REG_COLS = ['Region','Gross Unit','Total Gross Sales','Net Unit','Total Net Sales','Total Sales+AOP',
     'Projected Cost','Total Cost','MTD Leads','Total Leads','MTD CPL','Total QL','CPQL','SV Done',
     'Cost/NBR','Cost/NBR+AOP','AV','Cost','Leads','Deficit',
-    'Focus Project','AOP Project','YTD Spend','YTD Revenue','YTD ROI','Expected YTD Revenue'];
+    'Focus Project', 'AOP Project', 'YTD Spend', 'YTD Revenue', 'YTD ROI', 'Expected YTD Revenue'];
 
   function regionCells(r) {
     return [
@@ -81,12 +80,11 @@
 
   /* ---------------- SM / Manager View ---------------- */
   const MGR_COLS = [
-  'Manager','Gross Unit','Total Gross Sales','Net Unit','Total Net Sales','Total Sales+AOP',
+    'Manager','Gross Unit','Total Gross Sales','Net Unit','Total Net Sales','Total Sales+AOP',
     'Projected Cost','Total Cost','MTD Leads','Total Leads','MTD CPL','Total QL','CPQL','SV Done',
     'Cost/NBR','Cost/NBR+AOP','AV','Cost','Leads','Deficit',
     'Focus Project', 'AOP Project', 'YTD Spend', 'YTD Revenue', 'YTD ROI', 'Expected YTD Revenue'
   ];
-  const SRC_COLS = ['Source Cost','Source Leads','Source CPL'];
 
   /* Project \u2192 SM lookup, built from the arithmetic-verified Bangalore portfolio
      (planned + unplanned + builtup). Campaign register project names carry extra
@@ -163,6 +161,7 @@
       return `<tr>
         <td>${m.manager}</td>
         <td>${fmtR(m.budget)}</td>
+       <-- <td><span class="prog"><i style="width:${pct}%" class="${m.spent > m.budget ? 'over' : ''}"></i></span>${fmtR(m.spent)}</td>-->
         <td>${fmtR(m.targetRev)}</td>
         <td>${m.mtdQL == null ? '\u2014' : fmtN(m.mtdQL)}</td>
         <td>${m.totMtdQL == null ? '\u2014' : fmtN(m.totMtdQL)}</td>
