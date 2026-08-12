@@ -1018,38 +1018,6 @@ table.tbl{
     box-shadow:none;
   }
 }
-/* ================================
-   Project Summary / Focus / AOP Tables
-   ================================ */
-
-#panel-project_summary .tableWrap,
-#panel-focus_project .tableWrap,
-#panel-aop_project .tableWrap {
-  width: 100%;
-  max-width: 100%;
-  overflow-x: auto;
-  overflow-y: hidden;
-  -webkit-overflow-scrolling: touch;
-}
-
-#panel-project_summary table,
-#panel-focus_project table,
-#panel-aop_project table {
-  width: max-content;
-  min-width: 1800px;
-  table-layout: auto;
-  border-collapse: separate;
-  border-spacing: 0;
-}
-
-#panel-project_summary th,
-#panel-focus_project th,
-#panel-aop_project th {
-  white-space: nowrap;
-  word-break: normal;
-  overflow-wrap: normal;
-  min-width: 90px;
-}
 
 #panel-project_summary td,
 #panel-focus_project td,
@@ -1094,4 +1062,161 @@ table.tbl{
   height: 17px;
   cursor: pointer;
   accent-color: #fb6a02;
+}
+/* =========================================================
+   PROJECT SUMMARY / FOCUS / AOP
+   Match SM / Manager table design
+   ========================================================= */
+
+#panel-project_summary .tableWrap,
+#panel-focus_project .tableWrap,
+#panel-aop_project .tableWrap {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  position: relative;
+}
+
+/* Table */
+#panel-project_summary table,
+#panel-focus_project table,
+#panel-aop_project table {
+  width: max-content;
+  min-width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  table-layout: auto;
+}
+
+/* Header */
+#panel-project_summary table thead th,
+#panel-focus_project table thead th,
+#panel-aop_project table thead th {
+  background: #242322;
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: .2px;
+
+  padding: 16px 18px;
+  height: 58px;
+
+  white-space: nowrap;
+  word-break: normal;
+  overflow-wrap: normal;
+
+  border: 0;
+  border-bottom: 3px solid #fb6a02;
+
+  text-align: left;
+  vertical-align: middle;
+}
+
+/* Body rows */
+#panel-project_summary table tbody td,
+#panel-focus_project table tbody td,
+#panel-aop_project table tbody td {
+  padding: 16px 18px;
+
+  height: 54px;
+
+  font-size: 15px;
+  font-weight: 500;
+
+  white-space: nowrap;
+  word-break: normal;
+  overflow-wrap: normal;
+
+  border-bottom: 1px solid #e8ebef;
+
+  background: #fff;
+  vertical-align: middle;
+}
+
+/* Alternate row */
+#panel-project_summary table tbody tr:nth-child(even) td,
+#panel-focus_project table tbody tr:nth-child(even) td,
+#panel-aop_project table tbody tr:nth-child(even) td {
+  background: #f8f9fa;
+}
+
+/* Hover */
+#panel-project_summary table tbody tr:hover td,
+#panel-focus_project table tbody tr:hover td,
+#panel-aop_project table tbody tr:hover td {
+  background: #f3f4f6;
+}
+
+/* Project name */
+#panel-project_summary table th:nth-child(3),
+#panel-project_summary table td:nth-child(3),
+#panel-focus_project table th:nth-child(3),
+#panel-focus_project table td:nth-child(3),
+#panel-aop_project table th:nth-child(3),
+#panel-aop_project table td:nth-child(3) {
+  min-width: 190px;
+}
+
+/* Checkbox columns */
+#panel-project_summary table th:nth-child(1),
+#panel-project_summary table th:nth-child(2),
+#panel-project_summary table td:nth-child(1),
+#panel-project_summary table td:nth-child(2) {
+  min-width: 120px;
+  text-align: center;
+}
+
+/* Checkbox */
+.project-focus-checkbox,
+.project-aop-checkbox {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: #fb6a02;
+}
+
+/* Don't allow text to break */
+#panel-project_summary table th,
+#panel-project_summary table td,
+#panel-focus_project table th,
+#panel-focus_project table td,
+#panel-aop_project table th,
+#panel-aop_project table td {
+  white-space: nowrap;
+}
+
+/* Keep Project Name readable */
+#panel-project_summary table td:nth-child(3),
+#panel-focus_project table td:nth-child(3),
+#panel-aop_project table td:nth-child(3) {
+  white-space: normal;
+  line-height: 1.35;
+}
+
+/* Horizontal scrollbar */
+#panel-project_summary .tableWrap::-webkit-scrollbar,
+#panel-focus_project .tableWrap::-webkit-scrollbar,
+#panel-aop_project .tableWrap::-webkit-scrollbar {
+  height: 10px;
+}
+
+#panel-project_summary .tableWrap::-webkit-scrollbar-track,
+#panel-focus_project .tableWrap::-webkit-scrollbar-track,
+#panel-aop_project .tableWrap::-webkit-scrollbar-track {
+  background: #eef0f3;
+  border-radius: 10px;
+}
+
+#panel-project_summary .tableWrap::-webkit-scrollbar-thumb,
+#panel-focus_project .tableWrap::-webkit-scrollbar-thumb,
+#panel-aop_project .tableWrap::-webkit-scrollbar-thumb {
+  background: #b7bbc2;
+  border-radius: 10px;
+}
+
+#panel-project_summary .tableWrap::-webkit-scrollbar-thumb:hover,
+#panel-focus_project .tableWrap::-webkit-scrollbar-thumb:hover,
+#panel-aop_project .tableWrap::-webkit-scrollbar-thumb:hover {
+  background: #8e939b;
 }
